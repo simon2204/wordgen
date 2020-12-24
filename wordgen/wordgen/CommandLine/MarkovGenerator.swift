@@ -26,7 +26,7 @@ extension Wordgen {
         var output: String
         
         @Option(name: .shortAndLong,
-                help: "The mode tun run the generator in. Either 'weightedRandom' or 'descendingProbability'.")
+                help: "The mode to run the generator in. Either 'weightedRandom' or 'descendingProbability'.")
         var generator: Generator
         
         @Option(name: .shortAndLong,

@@ -10,12 +10,12 @@ struct Successor {
     private(set) var cumulativeFrequency = 0
     
     init(_ sign: Sign) {
-        append(zeichen: sign)
+        append(sign: sign)
     }
     
-    mutating func append(zeichen: Sign) {
-        if (dict[zeichen]? += 1) == nil {
-            dict[zeichen] = 1
+    mutating func append(sign: Sign) {
+        if (dict[sign]? += 1) == nil {
+            dict[sign] = 1
         }
         cumulativeFrequency += 1
     }

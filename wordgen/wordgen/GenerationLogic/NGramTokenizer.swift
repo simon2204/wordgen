@@ -31,7 +31,7 @@ final class NGramTokenizer {
     }
     
     private func addKey(_ key: Sign, withValue value: Sign) {
-        if transitions[key]?.append(zeichen: value) == nil {
+        if transitions[key]?.append(sign: value) == nil {
             transitions[key] = Successor(value)
         }
     }
