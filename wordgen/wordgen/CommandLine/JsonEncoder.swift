@@ -27,7 +27,7 @@ extension Wordgen {
         
         func validate() throws {
             guard order >= 1 else {
-                throw ValidationError("'<order>' must be at least 1.")
+                throw ValidationError("'<order>' has to be at least 1.")
             }
         }
         
