@@ -22,12 +22,20 @@ final class NGramTokenizer {
     
     private func createNgramPairs(token: String) {
         guard token.count >= order else { return }
-        let ngramsCount = token.count - order
-        addKey(.start, withValue: .value(token[0..<order]))
-        for i in 0..<ngramsCount {
-            addKey(.value(token[i..<i+order]), withValue: .value(token[i+order]))
+        let ngramCount = token.count + 1 - order
+        if ngramCount == 1 {
+            addKey(.`init`, withValue: .end(token[0..<order]))
+        } else if ngramCount == 2 {
+            addKey(.`init`, withValue: .start(token[0..<order]))
+            addKey(.start(token[0..<order]), withValue: .end(token[1..<order+1]))
+        } else {
+            addKey(.`init`, withValue: .start(token[0..<order]))
+            addKey(.start(token[0..<order]), withValue: .middle(token[1..<order+1]))
+            for i in 1..<ngramCount-1 {
+                addKey(.middle(token[i..<order+i]), withValue: .middle(token[i+1..<order+i+1]))
+            }
+            addKey(.middle(token[ngramCount-1..<order+ngramCount-1]), withValue: .end(token[ngramCount..<order+ngramCount]))
         }
-        addKey(.value(token[ngramsCount..<ngramsCount+order]), withValue: .end)
     }
     
     private func addKey(_ key: Sign, withValue value: Sign) {

@@ -25,11 +25,9 @@ struct Wordgenerator<Iterator: IteratorProtocol>: Sequence where Iterator.Elemen
         
         mutating func next() -> String? {
             var word: String?
-            while let nextSign = tokenizerIterator.next(), let nextValue = nextSign.value {
-                if let newWord = word {
-                    word = newWord + nextValue
-                } else {
-                    word = String(nextValue)
+            while let nextSign = tokenizerIterator.next() {
+                if (word? += nextSign.value!) == nil {
+                    word = String(nextSign.value!)
                 }
             }
             return word

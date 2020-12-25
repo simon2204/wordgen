@@ -104,7 +104,7 @@ extension Wordgen {
                 let wordgenerator = Wordgenerator(
                     iterator: NaiveDescendingProbabilityIterator(
                         tokenizer,
-                        maxWordCount: wordLength!))
+                        maxWordLength: wordLength!))
                 try writeDataToFileFromSequence(
                     wordgenerator,
                     withEncoding: outputEncoding)

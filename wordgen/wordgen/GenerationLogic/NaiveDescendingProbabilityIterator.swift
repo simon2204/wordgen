@@ -7,36 +7,39 @@
 
 struct NaiveDescendingProbabilityIterator: IteratorProtocol {
     private let ngramTokenizer: NGramTokenizer
-    private let maxWordCount: Int
+    private let maxWordLength: Int
     private var orderedSuccessors = [Sign : [Sign]]()
-    private var nextSigns: [(Sign, Int)] = [(.start, 0)]
+    private var nextSigns: [(Sign, Int)] = [(.`init`, 0)]
     private var currentIndex = 0
     
     private var order: Int {
         ngramTokenizer.order
     }
     
-    init(_ ngramTokenizer: NGramTokenizer, maxWordCount: Int) {
+    init(_ ngramTokenizer: NGramTokenizer, maxWordLength: Int) {
         self.ngramTokenizer = ngramTokenizer
-        self.maxWordCount = maxWordCount + 1 - ngramTokenizer.order
+        self.maxWordLength = maxWordLength + 1 - ngramTokenizer.order
         orderedSuccessors.reserveCapacity(ngramTokenizer.transitions.count)
-        nextSigns.reserveCapacity(maxWordCount)
+        nextSigns.reserveCapacity(maxWordLength)
     }
     
     
     mutating func next() -> Sign? {
         guard fillUpNextSigns() else { return nil }
-        var nextSign: Sign = .end
+        let (sign, index) = nextSigns[currentIndex]
+        var nextSign = successors(for: sign)![index]
         
-        if currentIndex < nextSigns.count {
-            let (sign, index) = nextSigns[currentIndex]
-            nextSign = successors(for: sign)![index]
-            currentIndex += 1
+        if currentIndex == nextSigns.count - 1 {
+            nextSign = .end(nextSign.value!)
         }
-        if nextSign == .end {
+        
+        currentIndex += 1
+        
+        if nextSign.isEnd {
             currentIndex = 0
             nextPermutation()
         }
+        
         return nextSign
     }
     
@@ -51,17 +54,11 @@ struct NaiveDescendingProbabilityIterator: IteratorProtocol {
     
     
     private mutating func fillUpNextSigns() -> Bool {
-        while nextSigns.count < maxWordCount {
+        while nextSigns.count < maxWordLength {
             guard let (element, index) = nextSigns.last else { return false }
-            var nextSign = successors(for: element)![index]
-            if element == .start {
-                nextSigns.append((nextSign, 0))
-            } else if let nextValue = nextSign.value {
-                nextSign = .value(String(element.value!)[1..<order] + nextValue)
-                nextSigns.append((nextSign, 0))
-            } else {
-                return true
-            }
+            let nextSign = successors(for: element)![index]
+            nextSigns.append((nextSign, 0))
+            if nextSign.isEnd { return true }
         }
         return true
     }
