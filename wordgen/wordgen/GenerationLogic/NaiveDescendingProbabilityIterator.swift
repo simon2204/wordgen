@@ -9,7 +9,7 @@ struct NaiveDescendingProbabilityIterator: IteratorProtocol {
     private let ngramTokenizer: NGramTokenizer
     private let maxWordLength: Int
     private var orderedSuccessors = [Sign : [Sign]]()
-    private var nextSigns: [(Sign, Int)] = [(.`init`, 0)]
+    private var nextSigns = [(Sign.`init`, 0)]
     private var currentIndex = 0
     
     private var order: Int {
@@ -29,8 +29,8 @@ struct NaiveDescendingProbabilityIterator: IteratorProtocol {
         let (sign, index) = nextSigns[currentIndex]
         var nextSign = successors(for: sign)![index]
         
-        if currentIndex == nextSigns.count - 1 {
-            nextSign = .end(nextSign.value!)
+        if currentIndex == maxWordLength - 1 {
+            nextSign = .end(nextSign.unwrapped!)
         }
         
         currentIndex += 1
@@ -57,8 +57,8 @@ struct NaiveDescendingProbabilityIterator: IteratorProtocol {
         while nextSigns.count < maxWordLength {
             guard let (element, index) = nextSigns.last else { return false }
             let nextSign = successors(for: element)![index]
-            nextSigns.append((nextSign, 0))
             if nextSign.isEnd { return true }
+            nextSigns.append((nextSign, 0))
         }
         return true
     }
@@ -67,14 +67,14 @@ struct NaiveDescendingProbabilityIterator: IteratorProtocol {
     private mutating func nextPermutation() {
         guard var (lastElement, index) = nextSigns.last else { return }
         var successorCount = self.successors(for: lastElement)!.count
-        
+
         while index == successorCount - 1 {
             nextSigns.removeLast()
             guard let lastSign = nextSigns.last else { return }
             (lastElement, index) = lastSign
             successorCount = self.successors(for: lastElement)!.count
         }
-        
+
         nextSigns[nextSigns.count - 1] = (lastElement, index + 1)
     }
 }

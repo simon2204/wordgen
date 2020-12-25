@@ -52,21 +52,21 @@ extension Wordgen {
             
             if !isJsonModel {
                 guard let order = order else {
-                    throw ValidationError("'<order>' must be provided when using JSON model.")
+                    throw ValidationError("Missing expected argument '--order <order>'. Has to be provided when input-file is no JSON model.")
                 }
                 
                 guard order >= 1 else {
-                    throw ValidationError("'<order>' must be at least 1.")
+                    throw ValidationError("'<order>' has to be at least 1.")
                 }
             }
             
             if generator == .descendingProbability {
                 guard let wordLength = wordLength else {
-                    throw ValidationError("'<wordLength>' must be provided when using DescendingProbabilityGenerator.")
+                    throw ValidationError("Missing expected argument '--wordLength <wordLength>'. Has to be provided when using DescendingProbabilityGenerator.")
                 }
                 
                 guard wordLength >= 1 else {
-                    throw ValidationError("'<wordLength>' must be at least 1.")
+                    throw ValidationError("'<wordLength>' has to be at least 1.")
                 }
             }
         }

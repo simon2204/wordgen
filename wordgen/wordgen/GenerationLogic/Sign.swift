@@ -31,6 +31,17 @@ enum Sign: Hashable {
             return value
         }
     }
+    
+    var unwrapped: Substring? {
+        switch self {
+        case .`init`:
+            return nil
+        case let .start(value),
+             let .middle(value),
+             let .end(value):
+            return value
+        }
+    }
 }
 
 extension Sign: Codable {
