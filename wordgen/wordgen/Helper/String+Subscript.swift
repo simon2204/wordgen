@@ -24,6 +24,10 @@ extension Substring {
         return self[pos..<pos+1]
     }
     
+    subscript(pos: Index) -> SubSequence {
+        return self[pos...pos]
+    }
+    
     subscript(range: Range<Int>) -> SubSequence {
         let start = self.index(self.startIndex, offsetBy: range.startIndex)
         let ende = self.index(self.startIndex, offsetBy: range.endIndex)

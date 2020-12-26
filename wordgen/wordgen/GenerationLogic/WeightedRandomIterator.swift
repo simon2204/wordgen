@@ -24,11 +24,11 @@ struct WeightedRandomIterator: IteratorProtocol {
         let randomNumber = successorFrequencyRange.randomElement()!
         
         var sumOfWeights = 0
-        for (newSign, weight) in successor {
+        for (sign, weight) in successor {
             sumOfWeights += weight
             if randomNumber <= sumOfWeights {
-                key = newSign.isEnd ? .`init` : newSign
-                return newSign
+                key = sign == .end ? .`init` : sign
+                return sign
             }
         }
         

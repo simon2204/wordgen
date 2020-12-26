@@ -24,20 +24,13 @@ final class NGramTokenizer {
         let wordLength = token.count
         guard wordLength >= order else { return }
         let ngramCount = wordLength + 1 - order
-        let middleCount = wordLength - 1 - order
-        if ngramCount == 1 {
-            addKey(.`init`, withValue: .end(token[0..<order]))
-        } else if ngramCount == 2 {
-            addKey(.`init`, withValue: .start(token[0..<order]))
-            addKey(.start(token[0..<order]), withValue: .end(token[1..<order+1]))
-        } else {
-            addKey(.`init`, withValue: .start(token[0..<order]))
-            addKey(.start(token[0..<order]), withValue: .middle(token[1..<order+1]))
-            for i in 1..<middleCount {
-                addKey(.middle(token[i..<order+i]), withValue: .middle(token[i+1..<order+i+1]))
-            }
-            addKey(.middle(token[middleCount..<order+middleCount]), withValue: .end(token[middleCount+1..<order+middleCount+1]))
+        addKey(.`init`, withValue: .start(token[0..<order]))
+        var key = Sign.start(token[0..<order])
+        for i in 1..<ngramCount {
+            addKey(key, withValue: .value(token[i..<i+order]))
+            key = .value(token[i..<i+order])
         }
+        addKey(key, withValue: .end)
     }
     
     private func addKey(_ key: Sign, withValue value: Sign) {

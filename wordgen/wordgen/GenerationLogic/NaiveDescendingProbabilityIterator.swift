@@ -23,26 +23,23 @@ struct NaiveDescendingProbabilityIterator: IteratorProtocol {
         nextSigns.reserveCapacity(maxWordLength)
     }
     
-    
     mutating func next() -> Sign? {
         guard fillUpNextSigns() else { return nil }
-        let (sign, index) = nextSigns[currentIndex]
-        var nextSign = successors(for: sign)![index]
+        var nextSign = Sign.end
         
-        if currentIndex == maxWordLength - 1 {
-            nextSign = .end(nextSign.unwrapped!)
+        if currentIndex < nextSigns.count {
+            let (sign, index) = nextSigns[currentIndex]
+            nextSign = successors(for: sign)![index]
+            currentIndex += 1
         }
         
-        currentIndex += 1
-        
-        if nextSign.isEnd {
+        if nextSign == .end {
             currentIndex = 0
             nextPermutation()
         }
         
         return nextSign
     }
-    
     
     private mutating func successors(for sign: Sign) -> [Sign]? {
         if let signs = orderedSuccessors[sign] { return signs }
@@ -52,17 +49,15 @@ struct NaiveDescendingProbabilityIterator: IteratorProtocol {
         return orderedSigns
     }
     
-    
     private mutating func fillUpNextSigns() -> Bool {
         while nextSigns.count < maxWordLength {
             guard let (element, index) = nextSigns.last else { return false }
             let nextSign = successors(for: element)![index]
-            if nextSign.isEnd { return true }
+            if nextSign == .end { return true }
             nextSigns.append((nextSign, 0))
         }
         return true
     }
-    
     
     private mutating func nextPermutation() {
         guard var (lastElement, index) = nextSigns.last else { return }
