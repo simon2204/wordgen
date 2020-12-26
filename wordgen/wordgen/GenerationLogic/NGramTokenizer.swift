@@ -21,13 +21,16 @@ final class NGramTokenizer {
     }
     
     private func createNgramPairs(token: String) {
-        guard token.count >= order else { return }
-        let ngramsCount = token.count - order
-        addKey(.start, withValue: .value(token[0..<order]))
-        for i in 0..<ngramsCount {
-            addKey(.value(token[i..<i+order]), withValue: .value(token[i+order]))
+        let wordLength = token.count
+        guard wordLength >= order else { return }
+        let ngramCount = wordLength + 1 - order
+        addKey(.`init`, withValue: .start(token[0..<order]))
+        var key = Sign.start(token[0..<order])
+        for i in 1..<ngramCount {
+            addKey(key, withValue: .value(token[i..<i+order]))
+            key = .value(token[i..<i+order])
         }
-        addKey(.value(token[ngramsCount..<ngramsCount+order]), withValue: .end)
+        addKey(key, withValue: .end)
     }
     
     private func addKey(_ key: Sign, withValue value: Sign) {

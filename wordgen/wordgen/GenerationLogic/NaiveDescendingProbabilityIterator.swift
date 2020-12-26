@@ -7,39 +7,39 @@
 
 struct NaiveDescendingProbabilityIterator: IteratorProtocol {
     private let ngramTokenizer: NGramTokenizer
-    private let maxWordCount: Int
+    private let maxWordLength: Int
     private var orderedSuccessors = [Sign : [Sign]]()
-    private var nextSigns: [(Sign, Int)] = [(.start, 0)]
+    private var nextSigns = [(Sign.`init`, 0)]
     private var currentIndex = 0
     
     private var order: Int {
         ngramTokenizer.order
     }
     
-    init(_ ngramTokenizer: NGramTokenizer, maxWordCount: Int) {
+    init(_ ngramTokenizer: NGramTokenizer, maxWordLength: Int) {
         self.ngramTokenizer = ngramTokenizer
-        self.maxWordCount = maxWordCount + 1 - ngramTokenizer.order
+        self.maxWordLength = maxWordLength + 1 - ngramTokenizer.order
         orderedSuccessors.reserveCapacity(ngramTokenizer.transitions.count)
-        nextSigns.reserveCapacity(maxWordCount)
+        nextSigns.reserveCapacity(maxWordLength)
     }
-    
     
     mutating func next() -> Sign? {
         guard fillUpNextSigns() else { return nil }
-        var nextSign: Sign = .end
+        var nextSign = Sign.end
         
         if currentIndex < nextSigns.count {
             let (sign, index) = nextSigns[currentIndex]
             nextSign = successors(for: sign)![index]
             currentIndex += 1
         }
+        
         if nextSign == .end {
             currentIndex = 0
             nextPermutation()
         }
+        
         return nextSign
     }
-    
     
     private mutating func successors(for sign: Sign) -> [Sign]? {
         if let signs = orderedSuccessors[sign] { return signs }
@@ -49,35 +49,27 @@ struct NaiveDescendingProbabilityIterator: IteratorProtocol {
         return orderedSigns
     }
     
-    
     private mutating func fillUpNextSigns() -> Bool {
-        while nextSigns.count < maxWordCount {
+        while nextSigns.count < maxWordLength {
             guard let (element, index) = nextSigns.last else { return false }
-            var nextSign = successors(for: element)![index]
-            if element == .start {
-                nextSigns.append((nextSign, 0))
-            } else if let nextValue = nextSign.value {
-                nextSign = .value(String(element.value!)[1..<order] + nextValue)
-                nextSigns.append((nextSign, 0))
-            } else {
-                return true
-            }
+            let nextSign = successors(for: element)![index]
+            if nextSign == .end { return true }
+            nextSigns.append((nextSign, 0))
         }
         return true
     }
     
-    
     private mutating func nextPermutation() {
         guard var (lastElement, index) = nextSigns.last else { return }
         var successorCount = self.successors(for: lastElement)!.count
-        
+
         while index == successorCount - 1 {
             nextSigns.removeLast()
             guard let lastSign = nextSigns.last else { return }
             (lastElement, index) = lastSign
             successorCount = self.successors(for: lastElement)!.count
         }
-        
+
         nextSigns[nextSigns.count - 1] = (lastElement, index + 1)
     }
 }

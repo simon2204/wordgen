@@ -50,6 +50,12 @@
             ReferencedContainer = "container:wordgen.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "generator /Users/Simon/Desktop/nachnamen.txt /Users/Simon/Desktop/nachnamenOutput.txt -o 3 -c 15  -g weightedRandom -w 10"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

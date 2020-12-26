@@ -30,7 +30,7 @@ extension Wordgen {
         var generator: Generator
         
         @Option(name: .shortAndLong,
-                help: "Count of Words to be returned, up to the specified maximum.")
+                help: "Count of words to be returned, up to the specified maximum.")
         var count: Int
         
         @Option(name: .shortAndLong,
@@ -104,7 +104,7 @@ extension Wordgen {
                 let wordgenerator = Wordgenerator(
                     iterator: NaiveDescendingProbabilityIterator(
                         tokenizer,
-                        maxWordCount: wordLength!))
+                        maxWordLength: wordLength!))
                 try writeDataToFileFromSequence(
                     wordgenerator,
                     withEncoding: outputEncoding)

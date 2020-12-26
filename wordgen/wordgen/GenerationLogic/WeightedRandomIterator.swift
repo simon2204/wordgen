@@ -7,7 +7,7 @@
 
 struct WeightedRandomIterator: IteratorProtocol {
     private let ngramTokenizer: NGramTokenizer
-    private var key: Sign = .start
+    private var key: Sign = .`init`
     private var order: Int { ngramTokenizer.order }
     
     init(_ ngramTokenizer: NGramTokenizer) {
@@ -24,24 +24,14 @@ struct WeightedRandomIterator: IteratorProtocol {
         let randomNumber = successorFrequencyRange.randomElement()!
         
         var sumOfWeights = 0
-        for (newSign, weight) in successor {
+        for (sign, weight) in successor {
             sumOfWeights += weight
             if randomNumber <= sumOfWeights {
-                calculateNextKey(from: newSign)
-                return newSign
+                key = sign == .end ? .`init` : sign
+                return sign
             }
         }
         
         fatalError("This should never be reached")
-    }
-    
-    private mutating func calculateNextKey(from sign: Sign) {
-        if key == .start {
-            key = sign
-        } else if sign == .end {
-            key = .start
-        } else {
-            key = .value(String(key.value!)[1..<order] + sign.value!)
-        }
     }
 }
