@@ -97,23 +97,25 @@ extension Wordgen {
             case .weightedRandom:
                 let wordgenerator = Wordgenerator(
                     iterator: WeightedRandomIterator(tokenizer))
-                try writeDataToFileFromSequence(
-                    wordgenerator,
+                try writeWords(
+                    from: wordgenerator,
+                    to: output,
                     withEncoding: outputEncoding)
             case .descendingProbability:
                 let wordgenerator = Wordgenerator(
                     iterator: NaiveDescendingProbabilityIterator(
                         tokenizer,
                         maxWordLength: wordLength!))
-                try writeDataToFileFromSequence(
-                    wordgenerator,
+                try writeWords(
+                    from: wordgenerator,
+                    to: output,
                     withEncoding: outputEncoding)
             }
         }
         
-        private func writeDataToFileFromSequence
+        private func writeWords
         <Wordgenerator: Sequence>(
-            _ wordgenerator: Wordgenerator,
+            from wordgenerator: Wordgenerator, to path: String,
             withEncoding encoding: String.Encoding)
         throws where Wordgenerator.Element: StringProtocol {
             let outputData = wordgenerator
@@ -122,7 +124,7 @@ extension Wordgen {
                 .joined(separator: seperator ?? "\n")
                 .data(using: encoding)
             do {
-                try outputData?.write(to: URL(fileURLWithPath: output))
+                try outputData?.write(to: URL(fileURLWithPath: path))
             } catch {
                 throw CodingError.unableToWrite(forEncoding: encoding)
             }

@@ -11,16 +11,16 @@ final class NGramTokenizer {
     
     init(tokens: [String], order: Int) {
         self.order = order
-        createNGramPairsForEachToken(tokens)
+        createNGramPairs(for: tokens)
     }
     
-    private func createNGramPairsForEachToken(_ tokens: [String]) {
+    private func createNGramPairs(for tokens: [String]) {
         for token in tokens {
-            createNgramPairs(token: token)
+            createNgramPairs(for: token)
         }
     }
     
-    private func createNgramPairs(token: String) {
+    private func createNgramPairs(for token: String) {
         let wordLength = token.count
         guard wordLength >= order else { return }
         let ngramCount = wordLength + 1 - order
