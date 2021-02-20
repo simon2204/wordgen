@@ -1,0 +1,13 @@
+/Users/Simon/GitLab/wordgen/wordgen/wordgen/Helper/Data+stringEncoding.swift
+/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/Generator.swift
+/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift
+/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/MarkovGenerator.swift
+/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/JsonEncoder.swift
+/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift
+/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/WeightedRandomIterator.swift
+/Users/Simon/GitLab/wordgen/wordgen/wordgen/Helper/String+Subscript.swift
+/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/CodingError.swift
+/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Successor.swift
+/Users/Simon/GitLab/wordgen/wordgen/wordgen/main.swift
+/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Wordgenerator.swift
+/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NGramTokenizer.swift

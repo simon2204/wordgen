@@ -5,27 +5,31 @@
 //  Created by Simon Schöpke on 21.12.20.
 //
 
-struct Wordgenerator<Iterator: IteratorProtocol>: Sequence where Iterator.Element == Sign {
-    fileprivate let iterator: Iterator
+/// Erstellt mit Hilfe eines zu übergebenen `Iterator`s neue Wörter
+public struct Wordgenerator<Iterator: IteratorProtocol>: Sequence where Iterator.Element == Sign {
     
-    init(iterator: Iterator) {
+    /// `Iterator`, der über die Elemente eines Objektes iterieren kann, welche vom Typ `Sign` sind
+    private let iterator: Iterator
+    
+    public init(iterator: Iterator) {
         self.iterator = iterator
     }
     
-    func makeIterator() -> WordgeneratorIterator {
+    public func makeIterator() -> WordgeneratorIterator {
         return WordgeneratorIterator(self)
     }
     
-    struct WordgeneratorIterator: IteratorProtocol {
-        private var tokenizerIterator: Iterator
+    /// Iterator für Wordgenerator
+    public struct WordgeneratorIterator: IteratorProtocol {
+        private var signIterator: Iterator
         
         fileprivate init(_ wordgenerator: Wordgenerator) {
-            self.tokenizerIterator = wordgenerator.iterator
+            self.signIterator = wordgenerator.iterator
         }
         
-        mutating func next() -> String? {
+        public mutating func next() -> String? {
             var word: String?
-            while let nextSign = tokenizerIterator.next(), let nextValue = nextSign.value {
+            while let nextSign = signIterator.next(), let nextValue = nextSign.value {
                 if (word? += nextValue) == nil {
                     word = String(nextValue)
                 }

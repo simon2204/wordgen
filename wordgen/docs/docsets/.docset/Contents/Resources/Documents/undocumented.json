@@ -1,0 +1,495 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/CodingError.swift",
+      "line": 8,
+      "symbol": "CodingError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/CodingError.swift",
+      "line": 9,
+      "symbol": "CodingError.unknownEncoding",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/CodingError.swift",
+      "line": 10,
+      "symbol": "CodingError.noPlainText",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/CodingError.swift",
+      "line": 11,
+      "symbol": "CodingError.unableToWrite(forEncoding:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/Generator.swift",
+      "line": 10,
+      "symbol": "Generator",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/Generator.swift",
+      "line": 11,
+      "symbol": "Generator.weightedRandom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/Generator.swift",
+      "line": 12,
+      "symbol": "Generator.descendingProbability",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/JsonEncoder.swift",
+      "line": 12,
+      "symbol": "Wordgen.JsonEncoder",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/JsonEncoder.swift",
+      "line": 20,
+      "symbol": "Wordgen.JsonEncoder.input",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/JsonEncoder.swift",
+      "line": 23,
+      "symbol": "Wordgen.JsonEncoder.output",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/JsonEncoder.swift",
+      "line": 26,
+      "symbol": "Wordgen.JsonEncoder.order",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/MarkovGenerator.swift",
+      "line": 12,
+      "symbol": "Wordgen.MarkovGenerator",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/MarkovGenerator.swift",
+      "line": 20,
+      "symbol": "Wordgen.MarkovGenerator.isJsonModel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/MarkovGenerator.swift",
+      "line": 23,
+      "symbol": "Wordgen.MarkovGenerator.input",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/MarkovGenerator.swift",
+      "line": 26,
+      "symbol": "Wordgen.MarkovGenerator.output",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/MarkovGenerator.swift",
+      "line": 30,
+      "symbol": "Wordgen.MarkovGenerator.generator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/MarkovGenerator.swift",
+      "line": 34,
+      "symbol": "Wordgen.MarkovGenerator.count",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/MarkovGenerator.swift",
+      "line": 38,
+      "symbol": "Wordgen.MarkovGenerator.order",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/MarkovGenerator.swift",
+      "line": 42,
+      "symbol": "Wordgen.MarkovGenerator.wordLength",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/MarkovGenerator.swift",
+      "line": 46,
+      "symbol": "Wordgen.MarkovGenerator.seperator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/CommandLine/MarkovGenerator.swift",
+      "line": 114,
+      "symbol": "Wordgen.MarkovGenerator.writeDataToFileFromSequence(_:withEncoding:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift",
+      "line": 8,
+      "symbol": "NaiveDescendingProbabilityIterator",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift",
+      "line": 9,
+      "symbol": "NaiveDescendingProbabilityIterator.ngramTokenizer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift",
+      "line": 10,
+      "symbol": "NaiveDescendingProbabilityIterator.maxWordLength",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift",
+      "line": 11,
+      "symbol": "NaiveDescendingProbabilityIterator.orderedSuccessors",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift",
+      "line": 12,
+      "symbol": "NaiveDescendingProbabilityIterator.nextSigns",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift",
+      "line": 13,
+      "symbol": "NaiveDescendingProbabilityIterator.currentIndex",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift",
+      "line": 15,
+      "symbol": "NaiveDescendingProbabilityIterator.order",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift",
+      "line": 19,
+      "symbol": "NaiveDescendingProbabilityIterator.init(_:maxWordLength:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift",
+      "line": 44,
+      "symbol": "NaiveDescendingProbabilityIterator.successors(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift",
+      "line": 52,
+      "symbol": "NaiveDescendingProbabilityIterator.fillUpNextSigns()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift",
+      "line": 62,
+      "symbol": "NaiveDescendingProbabilityIterator.nextPermutation()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 8,
+      "symbol": "Sign",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 9,
+      "symbol": "Sign.init",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 10,
+      "symbol": "Sign.start(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 11,
+      "symbol": "Sign.value(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 12,
+      "symbol": "Sign.end",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 14,
+      "symbol": "Sign.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 26,
+      "symbol": "Sign",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 28,
+      "symbol": "Sign.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 29,
+      "symbol": "Sign.CodingKeys.base",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 30,
+      "symbol": "Sign.CodingKeys.startParam",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 31,
+      "symbol": "Sign.CodingKeys.valueParam",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 34,
+      "symbol": "Sign.Base",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 35,
+      "symbol": "Sign.Base.init",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 36,
+      "symbol": "Sign.Base.start",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 37,
+      "symbol": "Sign.Base.value",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 38,
+      "symbol": "Sign.Base.end",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 41,
+      "symbol": "Sign.StartParam",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 42,
+      "symbol": "Sign.StartParam.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 45,
+      "symbol": "Sign.ValueParam",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 46,
+      "symbol": "Sign.ValueParam.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/WeightedRandomIterator.swift",
+      "line": 8,
+      "symbol": "WeightedRandomIterator",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/WeightedRandomIterator.swift",
+      "line": 9,
+      "symbol": "WeightedRandomIterator.ngramTokenizer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/WeightedRandomIterator.swift",
+      "line": 10,
+      "symbol": "WeightedRandomIterator.key",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/WeightedRandomIterator.swift",
+      "line": 11,
+      "symbol": "WeightedRandomIterator.order",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/WeightedRandomIterator.swift",
+      "line": 13,
+      "symbol": "WeightedRandomIterator.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/WeightedRandomIterator.swift",
+      "line": 21,
+      "symbol": "WeightedRandomIterator.weightedRandom()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Wordgenerator.swift",
+      "line": 14,
+      "symbol": "Wordgenerator.init(iterator:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Wordgenerator.swift",
+      "line": 24,
+      "symbol": "Wordgenerator.WordgeneratorIterator.signIterator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Wordgenerator.swift",
+      "line": 26,
+      "symbol": "Wordgenerator.WordgeneratorIterator.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/Helper/Data+stringEncoding.swift",
+      "line": 11,
+      "symbol": "Data.stringEncoding",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/Helper/String+Subscript.swift",
+      "line": 11,
+      "symbol": "String.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/Helper/String+Subscript.swift",
+      "line": 15,
+      "symbol": "String.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/Helper/String+Subscript.swift",
+      "line": 23,
+      "symbol": "Substring.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/Helper/String+Subscript.swift",
+      "line": 27,
+      "symbol": "Substring.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/Helper/String+Subscript.swift",
+      "line": 31,
+      "symbol": "Substring.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/main.swift",
+      "line": 10,
+      "symbol": "Wordgen",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/main.swift",
+      "line": 11,
+      "symbol": "Wordgen",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/main.swift",
+      "line": 11,
+      "symbol": "Wordgen",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Simon/GitLab/wordgen/wordgen"
+}

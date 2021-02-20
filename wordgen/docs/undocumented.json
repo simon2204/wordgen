@@ -1,0 +1,68 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift",
+      "line": 8,
+      "symbol": "NaiveDescendingProbabilityIterator",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/NaiveDescendingProbabilityIterator.swift",
+      "line": 19,
+      "symbol": "NaiveDescendingProbabilityIterator.init(_:maxWordLength:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 8,
+      "symbol": "Sign",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 9,
+      "symbol": "Sign.init",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 10,
+      "symbol": "Sign.start(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 11,
+      "symbol": "Sign.value(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 12,
+      "symbol": "Sign.end",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Sign.swift",
+      "line": 26,
+      "symbol": "Sign",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Simon/GitLab/wordgen/wordgen/wordgen/GenerationLogic/Wordgenerator.swift",
+      "line": 14,
+      "symbol": "Wordgenerator.init(iterator:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Simon/GitLab/wordgen/wordgen"
+}

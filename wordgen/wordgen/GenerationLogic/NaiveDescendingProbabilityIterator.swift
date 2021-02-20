@@ -5,7 +5,7 @@
 //  Created by Simon Schöpke on 19.12.20.
 //
 
-struct NaiveDescendingProbabilityIterator: IteratorProtocol {
+public struct NaiveDescendingProbabilityIterator: IteratorProtocol {
     private let ngramTokenizer: NGramTokenizer
     private let maxWordLength: Int
     private var orderedSuccessors = [Sign : [Sign]]()
@@ -16,14 +16,14 @@ struct NaiveDescendingProbabilityIterator: IteratorProtocol {
         ngramTokenizer.order
     }
     
-    init(_ ngramTokenizer: NGramTokenizer, maxWordLength: Int) {
+    public init(_ ngramTokenizer: NGramTokenizer, maxWordLength: Int) {
         self.ngramTokenizer = ngramTokenizer
         self.maxWordLength = maxWordLength + 1 - ngramTokenizer.order
         orderedSuccessors.reserveCapacity(ngramTokenizer.transitions.count)
         nextSigns.reserveCapacity(maxWordLength)
     }
     
-    mutating func next() -> Sign? {
+    public mutating func next() -> Sign? {
         guard fillUpNextSigns() else { return nil }
         var nextSign = Sign.end
         

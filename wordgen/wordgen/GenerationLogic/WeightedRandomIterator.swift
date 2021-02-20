@@ -14,7 +14,7 @@ struct WeightedRandomIterator: IteratorProtocol {
         self.ngramTokenizer = ngramTokenizer
     }
     
-    mutating func next() -> Sign? {
+    public mutating func next() -> Sign? {
         return weightedRandom()
     }
     
